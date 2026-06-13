@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dok View | Expat Appartement Mechelen</title>
+  <meta property="og:title" content="Dok View | Expat Appartement Mechelen">
+  <meta property="og:description" content="Exclusief luxe-appartement te huur in Mechelen met prachtig uitzicht op den Ouden Dok. Ideaal voor expats. English inquiries welcome.">
+  <meta property="og:image" content="https://dok-view.com/preview.jpg">
+  <meta property="og:url" content="https://www.dok-view.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dok View">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dok View | Expat Appartement Mechelen">
+  <meta name="twitter:description" content="Exclusief luxe-appartement te huur in Mechelen met prachtig uitzicht op den Ouden Dok.">
+  <meta name="twitter:image" content="https://dok-view.com/preview.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --gold: #C9981A; --gold-light: #F0D080; --gold-dark: #9A6E0A;
+  --bg: #FFFFFF; --bg2: #F8F6F0; --bg3: #F0EDE4;
+  --text: #1A1812; --text-muted: #6B6458; --border: rgba(184,150,12,0.25);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 4rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; letter-spacing: 2px; color: var(--gold-dark); text-transform: uppercase; }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+.hero { min-height: 100vh; background: var(--bg2); display: flex; flex-direction: column; justify-content: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; background: url('images/img1.jpg') center 20%/70% no-repeat; opacity: 0.65; mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, transparent 100%); -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, transparent 100%); }
+.hero-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 6vw, 82px); font-weight: 300; line-height: 1.05; color: var(--text); }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-sub { font-size: 14px; color: var(--text-muted); max-width: 440px; margin: 1.5rem 0 2.5rem; }
+.hero-cta { display: inline-flex; align-items: center; gap: 12px; padding: 14px 36px; border: 2px solid var(--gold); color: var(--gold-dark); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; background: transparent; font-family: 'Jost', sans-serif; cursor: pointer; }
+.hero-cta:hover { background: var(--gold); color: white; }
+.hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 300; color: var(--gold-dark); display: block; }
+.stat-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+section { padding: 6rem 4rem; }
+.section-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text); }
+.about { background: var(--bg); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; }
+.about-img { aspect-ratio: 4/5; background: url('images/img2.jpg') center/cover; position: relative; }
+.about-img::after { content: ''; position: absolute; inset: 10px 10px -10px -10px; border: 2px solid var(--gold-light); z-index: -1; }
+.about-text p { color: var(--text-muted); max-width: 480px; margin-bottom: 1rem; }
+.features { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 2rem; }
+.feature { padding: 0.9rem; border: 1px solid var(--border); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); display: flex; align-items: center; gap: 10px; background: var(--bg2); }
+.feature::before { content: '—'; color: var(--gold); }
+.gallery { background: var(--bg2); }
+.gallery-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 280px 280px; gap: 6px; margin-top: 3rem; }
+.gallery-item { background-size: cover; background-position: center; position: relative; overflow: hidden; min-height: 200px; }
+.gallery-item:first-child { grid-row: span 2; }
+.g1 { background-image: url('images/img3.jpg'); }
+.g2 { background-image: url('images/img4.jpg'); }
+.g3 { background-image: url('images/img5.jpg'); }
+.g4 { background-image: url('images/img6.jpg'); }
+.g5 { background-image: url('images/img7.jpg'); }
+.gallery-overlay { position: absolute; inset: 0; background: rgba(255,255,255,0); transition: background 0.4s; }
+.gallery-item:hover .gallery-overlay { background: rgba(255,255,255,0.15); }
+.location { background: var(--bg3); }
+.location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.location-desc { color: var(--text-muted); font-size: 14px; margin-bottom: 1rem; }
+.location-points { list-style: none; margin-top: 2rem; }
+.location-points li { padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); }
+.location-points li span:first-child { color: var(--text); }
+.map-img { aspect-ratio: 4/3; background: url('images/img1.jpg') center/cover; border: 1px solid var(--border); position: relative; overflow: hidden; }
+.map-img::after { content: 'Uitzicht vanuit het appartement'; position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); color: white; font-size: 12px; letter-spacing: 2px; text-align: center; }
+
+.dok-story { background: var(--bg2); padding: 6rem 4rem; }
+.dok-story-inner { max-width: 1100px; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.dok-story-text { }
+.dok-story-text p { color: var(--text-muted); margin-bottom: 1rem; font-size: 15px; line-height: 1.8; }
+.dok-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.dok-photo { aspect-ratio: 4/3; background-size: cover; background-position: center; position: relative; overflow: hidden; filter: grayscale(100%); opacity: 0.85; transition: opacity 0.4s; }
+.dok-photo:first-child { grid-column: span 2; aspect-ratio: 16/9; }
+.dok-photo:hover { opacity: 1; }
+.dok-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.8rem 1rem; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); color: var(--gold-light); font-size: 11px; letter-spacing: 1.5px; }
+@media (max-width: 768px) { .dok-story-inner { grid-template-columns: 1fr; gap: 2.5rem; } .dok-photos { grid-template-columns: 1fr; } .dok-photo:first-child { grid-column: span 1; } }
+
+.philosophy { background: var(--bg3); text-align: center; padding: 5rem 4rem; }
+.philosophy-inner { max-width: 700px; margin: 0 auto; }
+.philosophy-text { font-size: 17px; color: var(--text-muted); font-family: 'Cormorant Garamond', serif; font-style: italic; line-height: 1.8; margin-top: 1rem; }
+.contact { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
+.contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 1.5rem; color: var(--text); }
+.contact-info p { color: var(--text-muted); margin-bottom: 2rem; font-size: 14px; }
+.contact-detail { display: flex; flex-direction: column; gap: 1rem; }
+.detail-item { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.detail-dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+.form { display: flex; flex-direction: column; }
+.field { margin-bottom: 1.5rem; }
+.field label { display: block; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.field input, .field textarea, .field select { width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--border); padding: 10px 0; color: var(--text); font-family: 'Jost', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s; appearance: none; }
+.field input:focus, .field textarea:focus, .field select:focus { border-bottom-color: var(--gold); }
+.field textarea { resize: none; height: 90px; }
+.submit-btn { align-self: flex-start; padding: 14px 38px; background: var(--gold-dark); border: none; color: white; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; margin-top: 1rem; }
+.submit-btn:hover { background: var(--gold); }
+.success-msg { display: none; padding: 1rem; border-left: 3px solid var(--gold); background: var(--bg2); color: var(--gold-dark); font-size: 13px; margin-top: 1rem; }
+footer { padding: 2.5rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: var(--bg2); }
+footer p { font-size: 12px; color: var(--text-muted); letter-spacing: 1px; }
+footer span { font-family: 'Cormorant Garamond', serif; color: var(--gold-dark); font-size: 16px; }
+@media (max-width: 768px) { nav { padding: 1.2rem 1.5rem; } .nav-links { display: none; } section, .hero { padding: 5rem 1.5rem 3rem; } .about-grid, .location-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px 200px; } .gallery-item:first-child { grid-row: span 1; grid-column: span 2; } footer { flex-direction: column; gap: 0.5rem; text-align: center; } }
+
+.lang-switcher { display: flex; gap: 6px; align-items: center; }
+.lang-btn { background: none; border: 1px solid var(--gold); color: var(--gold-dark); font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 1.5px; padding: 4px 10px; cursor: pointer; transition: all 0.2s; }
+.lang-btn.active { background: var(--gold); color: white; }
+.lang-btn:hover { background: var(--gold); color: white; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo" data-nl="Expat Appartement Mechelen | Dok View" data-en="Expat Apartment Mechelen | Dok View" data-fr="Appartement Expatrié Malines | Dok View">Expat Appartement Mechelen | Dok View</div>
+  <div class="nav-links">
+    <a href="#about" data-nl="Appartement" data-en="Apartment" data-fr="Appartement">Appartement</a>
+    <a href="#gallery" data-nl="Foto's" data-en="Photos" data-fr="Photos">Foto's</a>
+    <a href="#location" data-nl="Locatie" data-en="Location" data-fr="Localisation">Locatie</a>
+    <a href="#contact" data-nl="Contact" data-en="Contact" data-fr="Contact">Contact</a>
+  </div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('nl', this)">NL</button>
+    <button class="lang-btn" onclick="setLang('en', this)">EN</button>
+    <button class="lang-btn" onclick="setLang('fr', this)">FR</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="hero-label" data-nl="Exclusief te huur — Mechelen" data-en="Exclusively for rent — Mechelen" data-fr="Exclusivement à louer — Malines">Exclusief te huur — Mechelen</p>
+  <h1 data-nl="Wonen op<br>een <em>hoger</em><br>niveau" data-en="Living at<br>a <em>higher</em><br>level" data-fr="Vivre à<br>un <em>niveau</em><br>supérieur">Wonen op<br>een <em>hoger</em><br>niveau</h1>
+  <p class="hero-sub" data-nl="Ontdek wonen op een unieke locatie in een van Mechelen's meest veelbelovende buurten. Dit stijlvolle appartement ligt aan het water, met een permanente zwemzone pal voor de deur — een zeldzame luxe in het stedelijke landschap. De buurt bruist van energie en is volop in ontwikkeling. De binnenstad bereik je moeiteloos via de handige bootshuttle, of op een aangenaam kwartiertje te voet. Antwerpen en Brussel? Die zijn in een mum van tijd bereikbaar, zowel met de wagen als met het openbaar vervoer — ideaal voor de actieve professional. De ideale uitvalsbasis voor expats die op zoek zijn naar comfort, stijl en een uitzonderlijke ligging." data-en="Discover living in a unique location in one of Mechelen's most promising neighbourhoods. This stylish apartment is situated by the water, with a permanent swimming area right at your doorstep — a rare luxury in the urban landscape. The neighbourhood is buzzing with energy and is rapidly developing. The city centre is easily reached by the handy water shuttle, or a pleasant fifteen-minute walk. Antwerp and Brussels? Reachable in no time, both by car and by public transport — ideal for the active professional. The perfect base for expats seeking comfort, style and an exceptional location." data-fr="Découvrez la vie dans un emplacement unique dans l'un des quartiers les plus prometteurs de Malines. Cet appartement élégant est situé au bord de l'eau, avec une zone de baignade permanente juste à la porte — un luxe rare dans le paysage urbain. Le quartier est plein d'énergie et en plein développement. Le centre-ville est facilement accessible par la navette fluviale, ou à un quart d'heure de marche agréable. Anvers et Bruxelles ? Accessibles en un rien de temps, aussi bien en voiture qu'en transports en commun — idéal pour le professionnel actif. La base idéale pour les expatriés à la recherche de confort, de style et d'un emplacement exceptionnel.">Ontdek wonen op een unieke locatie in een van Mechelen's meest veelbelovende buurten. Dit stijlvolle appartement ligt aan het water, met een permanente zwemzone pal voor de deur — een zeldzame luxe in het stedelijke landschap. De buurt bruist van energie en is volop in ontwikkeling. De binnenstad bereik je moeiteloos via de handige bootshuttle, of op een aangenaam kwartiertje te voet. Antwerpen en Brussel? Die zijn in een mum van tijd bereikbaar, zowel met de wagen als met het openbaar vervoer — ideaal voor de actieve professional. De ideale uitvalsbasis voor expats die op zoek zijn naar comfort, stijl en een uitzonderlijke ligging.</p>
+
+  <div class="hero-stats">
+    <div><span class="stat-num">105 m²</span><span class="stat-label" data-nl="Woonoppervlakte" data-en="Living area" data-fr="Surface habitable">Woonoppervlakte</span></div>
+    <div><span class="stat-num">20 m²</span><span class="stat-label" data-nl="Terras" data-en="Terrace" data-fr="Terrasse">Terras</span></div>
+    <div><span class="stat-num">2</span><span class="stat-label" data-nl="Slaapkamers" data-en="Bedrooms" data-fr="Chambres">Slaapkamers</span></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-img"></div>
+    <div class="about-text">
+      <p class="section-label" data-nl="Het appartement" data-en="The apartment" data-fr="L'appartement">Het appartement</p>
+      <h2 class="section-title" data-nl="Tijdloos design,<br>modern comfort" data-en="Timeless design,<br>modern comfort" data-fr="Design intemporel,<br>confort moderne">Tijdloos design,<br>modern comfort</h2>
+      <p data-nl="Dit volledig ingerichte en gemeubileerde appartement biedt alles wat een veeleisende huurder verwacht. Hoogwaardige afwerking, ruime leefruimte, een royaal terras en een spectaculair uitzicht op het historische oude zwembad gebouw van Mechelen." data-en="This fully equipped and furnished apartment offers everything a discerning tenant expects. High-quality finishes, spacious living area, a generous terrace and a spectacular view of the historic old swimming pool building of Mechelen." data-fr="Cet appartement entièrement équipé et meublé offre tout ce qu'un locataire exigeant peut espérer. Finitions de haute qualité, espace de vie spacieux, une terrasse généreuse et une vue spectaculaire sur l'historique ancienne piscine de Malines.">Dit volledig ingerichte en gemeubileerde appartement biedt alles wat een veeleisende huurder verwacht. Hoogwaardige afwerking, ruime leefruimte, een royaal terras en een spectaculair uitzicht op het historische oude zwembad gebouw van Mechelen.</p>
+      <p data-nl="Het appartement is uitsluitend beschikbaar voor expats op middellange of lange termijn. Verhuur voor korte periodes is niet mogelijk, teneinde het residentiële karakter van het gebouw te garanderen." data-en="The apartment is exclusively available to expats on a medium or long-term basis. Short-term rentals are not possible, in order to guarantee the residential character of the building." data-fr="L'appartement est exclusivement disponible pour les expatriés à moyen ou long terme. La location de courte durée n'est pas possible, afin de garantir le caractère résidentiel de l'immeuble.">Het appartement is uitsluitend beschikbaar voor expats op middellange of lange termijn. Verhuur voor korte periodes is niet mogelijk, teneinde het residentiële karakter van het gebouw te garanderen.</p>
+      <div class="features">
+        <div class="feature" data-nl="Volledig gemeubileerd" data-en="Fully furnished" data-fr="Entièrement meublé">Volledig gemeubileerd</div>
+        <div class="feature" data-nl="Designkeuken" data-en="Designer kitchen" data-fr="Cuisine design">Designkeuken</div>
+        <div class="feature" data-nl="Ruim terras" data-en="Spacious terrace" data-fr="Grande terrasse">Ruim terras</div>
+        <div class="feature" data-nl="Hoogwaardige afwerking" data-en="High-quality finishes" data-fr="Finitions haut de gamme">Hoogwaardige afwerking</div>
+        <div class="feature" data-nl="Panoramisch uitzicht" data-en="Panoramic view" data-fr="Vue panoramique">Panoramisch uitzicht</div>
+        <div class="feature" data-nl="Ondergrondse parking" data-en="Underground parking" data-fr="Parking souterrain">Ondergrondse parking</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <p class="section-label" data-nl="Fotogalerij" data-en="Photo gallery" data-fr="Galerie photos">Fotogalerij</p>
+  <h2 class="section-title" data-nl="Sfeer &amp; ruimte" data-en="Atmosphere &amp; space" data-fr="Ambiance &amp; espace">Sfeer &amp; ruimte</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item g1"><div class="gallery-overlay"></div></div>
+    <div class="gallery-item g2"><div class="gallery-overlay"></div></div>
+    <div class="gallery-item g3"><div class="gallery-overlay"></div></div>
+    <div class="gallery-item g4"><div class="gallery-overlay"></div></div>
+    <div class="gallery-item g5"><div class="gallery-overlay"></div></div>
+  </div>
+</section>
+
+<section class="location" id="location">
+  <div class="location-grid">
+    <div>
+      <p class="section-label" data-nl="Locatie" data-en="Location" data-fr="Localisation">Locatie</p>
+      <h2 class="section-title" data-nl="Mechelen,<br>hart van België" data-en="Mechelen,<br>heart of Belgium" data-fr="Malines,<br>cœur de la Belgique">Mechelen,<br>hart van België</h2>
+      <p class="location-desc" data-nl="Centraal gelegen tussen Brussel en Antwerpen, met uitstekende verbindingen naar beide steden." data-en="Centrally located between Brussels and Antwerp, with excellent connections to both cities." data-fr="Idéalement situé entre Bruxelles et Anvers, avec d'excellentes liaisons vers les deux villes.">Centraal gelegen tussen Brussel en Antwerpen, met uitstekende verbindingen naar beide steden.</p>
+      <ul class="location-points">
+        <li><span data-nl="Station Mechelen (hoofdstation)" data-en="Mechelen Station (main)" data-fr="Gare de Malines (principale)">Station Mechelen (hoofdstation)</span><span data-nl="±20 min. per bus / 5 min. per auto" data-en="±20 min. by bus / 5 min. by car" data-fr="±20 min. en bus / 5 min. en voiture">±20 min. per bus / 5 min. per auto</span></li>
+        <li><span data-nl="Station Mechelen-Nekkerspoel" data-en="Mechelen-Nekkerspoel station" data-fr="Gare de Malines-Nekkerspoel">Station Mechelen-Nekkerspoel</span><span data-nl="13 min. te voet" data-en="13 min. on foot" data-fr="13 min. à pied">13 min. te voet</span></li>
+        <li><span data-nl="Binnenstad / Grote Markt" data-en="City centre / Grote Markt" data-fr="Centre-ville / Grote Markt">Binnenstad / Grote Markt</span><span data-nl="15 min. te voet" data-en="15 min. on foot" data-fr="15 min. à pied">15 min. te voet</span></li>
+        <li><span data-nl="Brussel" data-en="Brussels" data-fr="Bruxelles">Brussel</span><span data-nl="20 min. per trein" data-en="20 min. by train" data-fr="20 min. en train">20 min. per trein</span></li>
+        <li><span data-nl="Antwerpen" data-en="Antwerp" data-fr="Anvers">Antwerpen</span><span data-nl="20 min. per trein" data-en="20 min. by train" data-fr="20 min. en train">20 min. per trein</span></li>
+        <li><span data-nl="Brussels Airport" data-en="Brussels Airport" data-fr="Aéroport de Bruxelles">Brussels Airport</span><span data-nl="30 min. per auto" data-en="30 min. by car" data-fr="30 min. en voiture">30 min. per auto</span></li>
+        <li><span data-nl="Oprit E19 / Mechelen-Zuid" data-en="E19 motorway / Mechelen-South" data-fr="Accès E19 / Malines-Sud">Oprit E19 / Mechelen-Zuid</span><span data-nl="±5 min. per auto" data-en="±5 min. by car" data-fr="±5 min. en voiture">±5 min. per auto</span></li>
+        <li><span data-nl="Bushalte (De Lijn)" data-en="Bus stop (De Lijn)" data-fr="Arrêt de bus (De Lijn)">Bushalte (De Lijn)</span><span data-nl="2 min. te voet" data-en="2 min. on foot" data-fr="2 min. à pied">2 min. te voet</span></li>
+        <li><span data-nl="Deelmobiliteit (fiets/auto/step)" data-en="Shared mobility (bike/car/scooter)" data-fr="Mobilité partagée (vélo/voiture/trottinette)">Deelmobiliteit (fiets/auto/step)</span><span data-nl="in de buurt" data-en="nearby" data-fr="à proximité">in de buurt</span></li>
+        <li><span data-nl="Bootshuttle naar centrum" data-en="Water shuttle to centre" data-fr="Navette fluviale vers le centre">Bootshuttle naar centrum</span><span data-nl="voor de deur" data-en="at the doorstep" data-fr="à la porte">voor de deur</span></li>
+      </ul>
+    </div>
+    <div class="map-embed" style="aspect-ratio:4/3; border: 1px solid var(--border); overflow: hidden;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.1!2d4.4805!3d51.0195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e3b2b2b2b2b3%3A0x1!2sRode+Kruisplein%2C+Mechelen!5e0!3m2!1snl!2sbe!4v1620000000000!5m2!1snl!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="dok-story">
+  <div class="dok-story-inner">
+    <div class="dok-story-text">
+      <p class="section-label" data-nl="Het verhaal achter de naam" data-en="The story behind the name" data-fr="L'histoire derrière le nom">Het verhaal achter de naam</p>
+      <h2 class="section-title" data-nl="Den Ouden Dok —<br>een <em>icoon</em> herleeft" data-en="Den Ouden Dok —<br>an <em>icon</em> reborn" data-fr="Den Ouden Dok —<br>une <em>icône</em> renaît">Den Ouden Dok —<br>een <em>icoon</em> herleeft</h2>
+      <p data-nl="Dok View ontleent zijn naam aan het historische zwembadgebouw dat prachtig zichtbaar is vanuit het appartement. Dit art-deco icoon, door Mechelaars liefkozend &quot;den Ouden Dok&quot; genoemd, is een getuige van de rijke geschiedenis van de stad." data-en="Dok View takes its name from the historic swimming pool building that is beautifully visible from the apartment. This art-deco icon, affectionately known by locals as &quot;den Ouden Dok&quot;, is a testament to the rich history of the city." data-fr="Dok View tire son nom du bâtiment historique de la piscine qui est magnifiquement visible depuis l'appartement. Cette icône art-déco, affectueusement appelée &quot;den Ouden Dok&quot; par les Malinois, témoigne de la riche histoire de la ville.">Dok View ontleent zijn naam aan het historische zwembadgebouw dat prachtig zichtbaar is vanuit het appartement. Dit art-deco icoon, door Mechelaars liefkozend "den Ouden Dok" genoemd, is een getuige van de rijke geschiedenis van de stad.</p>
+      <p data-nl="Het imposante gebouw vormt het hart van de snel ontwikkelende wijk aan het water. Waar vroeger Mechelaars kwamen zwemmen, is nu een levendige buurt ontstaan — met het appartement als uitgelezen uitvalsbasis om dit alles te beleven." data-en="The imposing building forms the heart of the rapidly developing waterfront neighbourhood. Where the people of Mechelen once came to swim, a vibrant community has now emerged — with the apartment as the perfect base to experience it all." data-fr="L'imposant bâtiment forme le cœur du quartier riverain en plein développement. Là où les Malinois venaient autrefois nager, un quartier animé a vu le jour — avec l'appartement comme base idéale pour tout vivre.">Het imposante gebouw vormt het hart van de snel ontwikkelende wijk aan het water. Waar vroeger Mechelaars kwamen zwemmen, is nu een levendige buurt ontstaan — met het appartement als uitgelezen uitvalsbasis om dit alles te beleven.</p>
+      <p data-nl="Vanuit uw terras en woonkamer geniet u dagelijks van dit unieke uitzicht — een stuk Mechels erfgoed dat het karakter van de buurt bepaalt." data-en="From your terrace and living room you enjoy this unique view every day — a piece of Mechelen heritage that defines the character of the neighbourhood." data-fr="Depuis votre terrasse et votre salon, vous profitez chaque jour de cette vue unique — un patrimoine malinois qui définit le caractère du quartier.">Vanuit uw terras en woonkamer geniet u dagelijks van dit unieke uitzicht — een stuk Mechels erfgoed dat het karakter van de buurt bepaalt.</p>
+    </div>
+    <div class="dok-photos">
+      <div class="dok-photo" style="background-image: url('images/img9.jpg');">
+        <span class="dok-caption">Den Ouden Dok — Mechelen</span>
+      </div>
+      <div class="dok-photo" style="background-image: url('images/img10.jpg');">
+        <span class="dok-caption">Het interieur van het zwembad</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="philosophy-inner">
+    <p class="section-label" data-nl="Onze aanpak" data-en="Our approach" data-fr="Notre approche">Onze aanpak</p>
+    <h2 class="section-title" data-nl="Kwaliteit &amp; service" data-en="Quality &amp; service" data-fr="Qualité &amp; service">Kwaliteit &amp; service</h2>
+    <p class="philosophy-text" data-nl="Dit appartement is speciaal ingericht voor expats die comfort en kwaliteit verwachten. Wij staan steeds voor u klaar met een persoonlijke en professionele service." data-en="This apartment is specially designed for expats who expect comfort and quality. We are always at your service with a personal and professional approach." data-fr="Cet appartement est spécialement conçu pour les expatriés qui attendent confort et qualité. Nous sommes toujours à votre disposition avec un service personnel et professionnel.">Dit appartement is speciaal ingericht voor expats die comfort en kwaliteit verwachten. Wij staan steeds voor u klaar met een persoonlijke en professionele service.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="section-label" data-nl="Neem contact op" data-en="Get in touch" data-fr="Contactez-nous">Neem contact op</p>
+      <h2 class="section-title" data-nl="Interesse?<br>Laat het ons weten" data-en="Interested?<br>Let us know" data-fr="Intéressé(e)?<br>Faites-le nous savoir">Interesse?<br>Laat het ons weten</h2>
+      <h3 data-nl="Wij beantwoorden uw bericht binnen 24 uur" data-en="We respond to your message within 24 hours" data-fr="Nous répondons à votre message dans les 24 heures">Wij beantwoorden uw bericht binnen 24 uur</h3>
+      <p data-nl="Aarzel niet om contact op te nemen voor beschikbaarheid, prijs of een bezichtiging op afspraak." data-en="Do not hesitate to contact us for availability, pricing or a viewing by appointment." data-fr="N'hésitez pas à nous contacter pour la disponibilité, le prix ou une visite sur rendez-vous.">Aarzel niet om contact op te nemen voor beschikbaarheid, prijs of een bezichtiging op afspraak.</p>
+      <div class="contact-detail">
+        <div class="detail-item"><span class="detail-dot"></span><span data-nl="Beschikbaar: bespreekbaar" data-en="Available: negotiable" data-fr="Disponible : à négocier">Beschikbaar: bespreekbaar</span></div>
+        <div class="detail-item"><span class="detail-dot"></span><span data-nl="Minimum huurperiode: 3 maanden" data-en="Minimum rental period: 3 months" data-fr="Période minimum : 3 mois">Minimum huurperiode: 3 maanden</span></div>
+        <div class="detail-item"><span class="detail-dot"></span><span data-nl="Engelstalige communicatie mogelijk" data-en="English communication available" data-fr="Communication en anglais possible">Engelstalige communicatie mogelijk</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="form">
+        <div class="field"><label data-nl="Naam" data-en="Name" data-fr="Nom">Naam</label><input type="text" id="fname" data-nl-ph="Uw volledige naam" data-en-ph="Your full name" data-fr-ph="Votre nom complet" placeholder="Uw volledige naam"></div>
+        <div class="field"><label data-nl="E-mailadres" data-en="Email address" data-fr="Adresse e-mail">E-mailadres</label><input type="email" id="femail" placeholder="uw@email.com"></div>
+        <div class="field"><label data-nl="Nationaliteit / Werkgever" data-en="Nationality / Employer" data-fr="Nationalité / Employeur">Nationaliteit / Werkgever</label><input type="text" id="fnat" data-nl-ph="Bijv. Duits / Siemens Belgium" data-en-ph="E.g. German / Siemens Belgium" data-fr-ph="Ex. Allemand / Siemens Belgique" placeholder="Bijv. Duits / Siemens Belgium"></div>
+        <div class="field">
+          <label data-nl="Gewenste huurperiode" data-en="Desired rental period" data-fr="Durée de location souhaitée">Gewenste huurperiode</label>
+          <select id="fperiod">
+            <option value="" data-nl="Selecteer..." data-en="Select..." data-fr="Sélectionner...">Selecteer...</option>
+            <option data-nl="3 – 6 maanden" data-en="3 – 6 months" data-fr="3 – 6 mois">3 – 6 maanden</option>
+            <option data-nl="6 – 12 maanden" data-en="6 – 12 months" data-fr="6 – 12 mois">6 – 12 maanden</option>
+            <option data-nl="1 jaar of langer" data-en="1 year or longer" data-fr="1 an ou plus">1 jaar of langer</option>
+          </select>
+        </div>
+        <div class="field"><label data-nl="Bericht" data-en="Message" data-fr="Message">Bericht</label><textarea id="fmsg" data-nl-ph="Vragen, verwachte startdatum, opmerkingen..." data-en-ph="Questions, expected start date, remarks..." data-fr-ph="Questions, date de début prévue, remarques..." placeholder="Vragen, verwachte startdatum, opmerkingen..."></textarea></div>
+        <button class="submit-btn" onclick="handleSubmit()" data-nl="Aanvraag versturen &#8599;" data-en="Send inquiry &#8599;" data-fr="Envoyer la demande &#8599;">Aanvraag versturen &#8599;</button>
+        <div class="success-msg" id="successMsg" data-nl="&#10003; &nbsp;Bedankt! Uw aanvraag is ontvangen. Wij nemen spoedig contact op." data-en="&#10003; &nbsp;Thank you! Your inquiry has been received. We will contact you shortly." data-fr="&#10003; &nbsp;Merci ! Votre demande a été reçue. Nous vous contacterons rapidement.">&#10003; &nbsp;Bedankt! Uw aanvraag is ontvangen. Wij nemen spoedig contact op.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Expat Apartment Mechelen | Dok View</span>
+  <p data-nl="Exclusieve verhuur voor expats &nbsp;—&nbsp; Mechelen, België" data-en="Exclusive rental for expats &nbsp;—&nbsp; Mechelen, Belgium" data-fr="Location exclusive pour expatriés &nbsp;—&nbsp; Malines, Belgique">Exclusieve verhuur voor expats &nbsp;—&nbsp; Mechelen, België</p>
+  <p>English inquiries welcome</p>
+</footer>
+<script>
+function setLang(lang, btn) {
+  // Update buttons
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  
+  // Update all elements with data-nl/en/fr attributes
+  document.querySelectorAll('[data-nl]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) el.innerHTML = text;
+  });
+  
+  // Update placeholders
+  document.querySelectorAll('[data-' + lang + '-ph]').forEach(el => {
+    el.placeholder = el.getAttribute('data-' + lang + '-ph');
+  });
+  
+  // Update select options
+  document.querySelectorAll('select option[data-nl]').forEach(opt => {
+    const text = opt.getAttribute('data-' + lang);
+    if (text) opt.textContent = text;
+  });
+  
+  localStorage.setItem('lang', lang);
+}
+
+async function handleSubmit() {
+  const name = document.getElementById('fname').value.trim();
+  const email = document.getElementById('femail').value.trim();
+  const nat = document.getElementById('fnat') ? document.getElementById('fnat').value.trim() : '';
+  const period = document.getElementById('fperiod') ? document.getElementById('fperiod').value : '';
+  const msg = document.getElementById('fmsg') ? document.getElementById('fmsg').value.trim() : '';
+  const lang = localStorage.getItem('lang') || 'nl';
+  const alerts = {nl: 'Gelieve minstens uw naam en e-mailadres in te vullen.', en: 'Please fill in at least your name and email address.', fr: 'Veuillez remplir au moins votre nom et votre adresse e-mail.'};
+  if (!name || !email) { alert(alerts[lang]); return; }
+
+  const btn = document.querySelector('.submit-btn');
+  btn.style.opacity = '0.4';
+  btn.disabled = true;
+
+  try {
+    const response = await fetch('https://formspree.io/f/mgoqljpd', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name, email, nationaliteit: nat, huurperiode: period, bericht: msg })
+    });
+    if (response.ok) {
+      document.getElementById('successMsg').style.display = 'block';
+    } else {
+      btn.style.opacity = '1';
+      btn.disabled = false;
+      alert('Er ging iets mis. Probeer opnieuw.');
+    }
+  } catch(e) {
+    btn.style.opacity = '1';
+    btn.disabled = false;
+    alert('Er ging iets mis. Probeer opnieuw.');
+  }
+}
+
+// Restore language on load
+window.addEventListener('load', () => {
+  const saved = localStorage.getItem('lang');
+  if (saved && saved !== 'nl') {
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(btn => { if(btn.textContent.toLowerCase() === saved) btn.classList.add('active'); });
+    document.querySelectorAll('[data-nl]').forEach(el => {
+      const text = el.getAttribute('data-' + saved);
+      if (text) el.innerHTML = text;
+    });
+    document.querySelectorAll('[data-' + saved + '-ph]').forEach(el => {
+      el.placeholder = el.getAttribute('data-' + saved + '-ph');
+    });
+    document.querySelectorAll('select option[data-nl]').forEach(opt => {
+      const text = opt.getAttribute('data-' + saved);
+      if (text) opt.textContent = text;
+    });
+  }
+});
+</script>
+</body>
+</html>
